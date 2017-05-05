@@ -1,8 +1,13 @@
+// import scala.collection.mutable
+
+import scala.collection.immutable. HashSet
+
 object array_test
 {
     def main(args: Array[String]) = 
     {
         val greetStrings: Array[String] = new Array[String](3)
+        
         greetStrings(0) = "Hello"
         greetStrings(1) = " "
         greetStrings(2) = "World!\n"
@@ -12,10 +17,9 @@ object array_test
         greetStrings.update(2,"Scala\n")
         // greetStrings.foreach( println )
 
-    //     for( i <- 0 to 2) {
-    //         print(greetStrings(i))
-    //     }
-    // }
+        // for( i <- 0 to 2) {
+        //    print(greetStrings(i))
+        // }
 
         for( i <- 0.to(2) ) 
             print(greetStrings.apply(i))
@@ -26,6 +30,21 @@ object array_test
         val n4 = n2 ::: n3
 
         println(n4) 
+
+        // tuples
+        val pair = (99, "Lee")
+        println(pair._1)
+        println(pair._2)
+
+        // val movieSet = mutable.Set("Hitch", "Poltergeist")
+        // movieSet += "Shrek"
+        // // movieSet += ("Shrek")
+        // println(movieSet)
+
+        val hashSet = HashSet("Tomatoes", "Chilies")
+
+        println(hashSet + "Coriander")
+        println(hashSet)
 
     }
 }
